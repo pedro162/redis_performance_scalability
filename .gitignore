@@ -1,0 +1,16 @@
+# Redis persistence and runtime data
+*.rdb
+*.aof
+appendonlydir/
+stats/
+
+# Local env files
+.env
+
+# Editor/OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

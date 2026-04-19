@@ -25,7 +25,7 @@ logs:
 	docker compose logs -f
 
 cli:
-	docker compose exec redis-estudos redis-cli -a "$$REDIS_PASSWORD"
+	docker compose exec redis-studies redis-cli -a "$$REDIS_PASSWORD"
 
 backup:
-	docker compose exec redis-estudos /data/backup_metrics.sh
+	docker compose exec redis-studies /data/backup_metrics.sh

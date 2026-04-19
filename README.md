@@ -5,7 +5,7 @@ This project provides a minimal Redis setup with persistence enabled and a small
 ## What is included
 
 - Redis container with password authentication and AOF enabled
-- Data volume mounted at `./dados` for persistence
+- Data volume mounted at `./data` for persistence
 - `backup_metrics.sh` script to snapshot `INFO memory`, `INFO stats`, and `INFO keyspace`
 
 ## Requirements
@@ -50,12 +50,12 @@ Inside the container, run:
 Backups are stored under:
 
 ```
-./dados/stats/<YYYY_MM_DD_HH_MM_SS>/
+./data/stats/<YYYY_MM_DD_HH_MM_SS>/
 ```
 
 ## Data persistence
 
-Redis persistence is stored in `./dados`, including AOF files and snapshots. These are ignored by git via `.gitignore`.
+Redis persistence is stored in `./data`, including AOF files and snapshots. These are ignored by git via `.gitignore`.
 
 ## Security note
 
@@ -89,7 +89,7 @@ make down
 ```
 .
 ├── docker-compose.yml
-└── dados
+└── data
     ├── backup_metrics.sh
     ├── appendonlydir/
     ├── dump.rdb
